@@ -25,20 +25,21 @@ public class Main {
 		inputs1.addItems(ShopItems.IMPORTCHOCOLATELARGE);
 		System.out.println("=========");
 
+		CalcOutputPrice calc = new CalcOutputPrice();
 		OutPuts outs1 = new OutPuts();
 		System.out.println("OutPutOne");
 		outs1.addItems(ShopItems.BOOK);
 		outs1.addItems(ShopItems.CHOCOLATEBAR);
 		outs1.addItems(ShopItems.MUSICCD);
-		outs1.totalOutPutPrice();
-		System.out.println("=========");
+		calc.totalOutPutPrice(outs1);
+		System.out.println("==tax should be 1.50==");
 
 		OutPuts outs2 = new OutPuts();
 		System.out.println("OutPutTwo");
 		outs2.addItems(ShopItems.IMPORTCHOCOLATESMALL);
 		outs2.addItems(ShopItems.IMPORTPERFUMELARGE);
-		outs2.totalOutPutPrice();
-		System.out.println("=========");
+		calc.totalOutPutPrice(outs2);
+		System.out.println("==tax should be 7.65==");
 
 		OutPuts outs3 = new OutPuts();
 		System.out.println("OutPutThree");
@@ -46,9 +47,9 @@ public class Main {
 		outs3.addItems(ShopItems.PERFUME);
 		outs3.addItems(ShopItems.HEADACHEPILLS);
 		outs3.addItems(ShopItems.IMPORTCHOCOLATELARGE);
-		outs3.totalOutPutPrice();
-		System.out.println("=========");
+		calc.totalOutPutPrice(outs3);
+		System.out.println("==tax should be 6.70==");
 	}
-}
+	}
 
 

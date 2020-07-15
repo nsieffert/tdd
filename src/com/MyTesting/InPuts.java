@@ -9,8 +9,6 @@ public class InPuts extends InPutOutPut{
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     public InPuts() {
-        this.price = price;
-        this.items = items;
         this.items = new ArrayList<ShopItems>();
    }
 
