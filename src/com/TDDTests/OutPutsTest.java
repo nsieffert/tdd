@@ -1,11 +1,10 @@
 package com.TDDTests;
 
-import com.MyTesting.CalcOutputPrice;
+import com.MyTesting.CalculatePrintOutputs;
 import com.MyTesting.OutPuts;
 import com.MyTesting.ShopItems;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
 
 import java.text.NumberFormat;
 
@@ -13,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OutPutsTest {
     OutPuts out = new OutPuts();
-    CalcOutputPrice calc = new CalcOutputPrice();
+    CalculatePrintOutputs calc = new CalculatePrintOutputs();
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     public void setup() {

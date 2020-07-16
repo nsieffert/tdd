@@ -4,28 +4,28 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		InPuts inputs1 = new InPuts();
+		InPuts inputs = new InPuts();
 		System.out.println("InputOne");
-		inputs1.addItems(ShopItems.BOOK);
-		inputs1.addItems(ShopItems.CHOCOLATEBAR);
-		inputs1.addItems(ShopItems.MUSICCD);
+		inputs.addItems(ShopItems.BOOK);
+		inputs.addItems(ShopItems.CHOCOLATEBAR);
+		inputs.addItems(ShopItems.MUSICCD);
 		System.out.println("=========");
 
-		InPuts inputs2 = new InPuts();
+
 		System.out.println("InputTwo");
-		inputs2.addItems(ShopItems.IMPORTCHOCOLATESMALL);
-		inputs2.addItems(ShopItems.IMPORTPERFUMELARGE);
+		inputs.addItems(ShopItems.IMPORTCHOCOLATESMALL);
+		inputs.addItems(ShopItems.IMPORTPERFUMELARGE);
 		System.out.println("=========");
 
-		InPuts inputs3 = new InPuts();
+
 		System.out.println("InputThree");
-		inputs1.addItems(ShopItems.IMPORTPERFUMESMALL);
-		inputs1.addItems(ShopItems.PERFUME);
-		inputs1.addItems(ShopItems.HEADACHEPILLS);
-		inputs1.addItems(ShopItems.IMPORTCHOCOLATELARGE);
+		inputs.addItems(ShopItems.IMPORTPERFUMESMALL);
+		inputs.addItems(ShopItems.PERFUME);
+		inputs.addItems(ShopItems.HEADACHEPILLS);
+		inputs.addItems(ShopItems.IMPORTCHOCOLATELARGE);
 		System.out.println("=========");
 
-		CalcOutputPrice calc = new CalcOutputPrice();
+		CalculatePrintOutputs calc = new CalculatePrintOutputs();
 		OutPuts outs1 = new OutPuts();
 		System.out.println("OutPutOne");
 		outs1.addItems(ShopItems.BOOK);
@@ -33,6 +33,7 @@ public class Main {
 		outs1.addItems(ShopItems.MUSICCD);
 		calc.totalOutPutPrice(outs1);
 		System.out.println("==tax should be 1.50==");
+		System.out.println("=========");
 
 		OutPuts outs2 = new OutPuts();
 		System.out.println("OutPutTwo");
@@ -40,6 +41,7 @@ public class Main {
 		outs2.addItems(ShopItems.IMPORTPERFUMELARGE);
 		calc.totalOutPutPrice(outs2);
 		System.out.println("==tax should be 7.65==");
+		System.out.println("=========");
 
 		OutPuts outs3 = new OutPuts();
 		System.out.println("OutPutThree");
@@ -49,6 +51,7 @@ public class Main {
 		outs3.addItems(ShopItems.IMPORTCHOCOLATELARGE);
 		calc.totalOutPutPrice(outs3);
 		System.out.println("==tax should be 6.70==");
+		System.out.println("=========");
 	}
 	}
 
