@@ -29,10 +29,10 @@
 <h2>
     3. Executing the Plan
 </h2>
-*
-*
-*
-*
+* I built the basic plan in the main class and then refactored to try and separate concerns.
+* I created more tests as I coded, trying to test the basic input output, pricing and tax calculations.
+* I attempted to refactor this even more to get rid of the array, but could not figure out how to calculate the price a different way.
+* In the end, I left it the way it was. It works, and it produces the correct output. It is scalable, but it is ugly.
 *
 *
 *
@@ -40,9 +40,9 @@
 <h2>
     4. Reflection / Refactor
 </h2>
-*
-*
-*
+* I reflect that I just don't know enough yet to do this exercise the way TEKSystems wants me to. 
+* I wish I could absorb data faster, but it is what it is.
+* With more time I am sure I could fix this, but I don't have that kind of time during bootcamp.
 *
 *
 *
