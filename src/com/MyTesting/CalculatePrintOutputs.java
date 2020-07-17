@@ -11,8 +11,8 @@ public class CalculatePrintOutputs {
             }
 
         }
-            System.out.println("Sales Taxes: " + outPuts.formatter.format(Math.round(finalTax * 20.00 + 1) / 20.00) +
-                    " Total: " + outPuts.formatter.format(finalPrice));
-            return finalPrice;
-        }
+        System.out.println("Sales Taxes: " + outPuts.formatter.format(Math.round(finalTax * 20.00 + 1) / 20.00) +
+                " Total: " + outPuts.formatter.format(finalPrice));
+        return finalPrice;
     }
+}
