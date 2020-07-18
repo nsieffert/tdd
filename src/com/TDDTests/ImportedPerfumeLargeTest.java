@@ -5,10 +5,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.text.NumberFormat;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class ImportedPerfumeLargeTest {
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     @BeforeEach
     void setUp() {
@@ -24,23 +27,20 @@ class ImportedPerfumeLargeTest {
 
     @Test
     void getOriginalPrice() {
-        double expected = 47.50;
-        double actual = ImportedPerfumeLarge.getInstance().originalPrice();
-        assertEquals(expected, actual);
+        String expected = "$47.50";
+        assertEquals(expected, formatter.format(ImportedPerfumeLarge.getInstance().originalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
-        double expected = 54.65;
-        double actual = ImportedPerfumeLarge.getInstance().getPRICE();
-        assertEquals(expected, actual);
+        String expected = "$54.65";
+        assertEquals(expected, formatter.format(ImportedPerfumeLarge.getInstance().getPRICE()));
     }
 
     @Test
     void getTax() {
-        double expected = 7.15;
-        double actual = ImportedPerfumeLarge.getInstance().getTAX();
-        assertEquals(expected, actual);
+        String expected = "$7.15";
+        assertEquals(expected, formatter.format(ImportedPerfumeLarge.getInstance().getTAX()));
     }
 
     @AfterEach

@@ -5,9 +5,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.text.NumberFormat;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class OutPutPricingTest {
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     @BeforeEach
     void setUp() {
@@ -22,37 +25,37 @@ class OutPutPricingTest {
 
     @Test
     void outputOnePricing() {
-        double expected = 29.83;
+        String expected = "$29.83";
         assertEquals(expected, OutPutPricing.getInstance().outputOnePricing());
     }
 
     @Test
     void outputOneTax() {
-        double expected = 1.50;
+        String expected = "$1.50";
         assertEquals(expected, OutPutPricing.getInstance().outputOneTax());
     }
 
     @Test
     void outputTwoPricing() {
-        double expected = 65.15;
+        String expected = "$65.15";
         assertEquals(expected, OutPutPricing.getInstance().outputTwoPricing());
     }
 
     @Test
     void outputTwoTax() {
-        double expected = 7.65;
+        String expected = "$7.65";
         assertEquals(expected, OutPutPricing.getInstance().outputTwoTax());
     }
 
     @Test
     void outputThreePricing() {
-        double expected = 74.68;
+        String expected = "$74.68";
         assertEquals(expected, OutPutPricing.getInstance().outputThreePricing());
     }
 
     @Test
     void outputThreeTax() {
-        double expected = 6.70;
+        String expected = "$6.70";
         assertEquals(expected, OutPutPricing.getInstance().outputThreeTax());
     }
 

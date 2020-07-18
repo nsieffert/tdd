@@ -27,23 +27,20 @@ class PerfumeTest {
 
     @Test
     void getOriginalPrice() {
-        double expected = 18.99;
-        double actual = Perfume.getInstance().originalPrice();
-        assertEquals(expected, actual);
+        String expected = "$18.99";
+        assertEquals(expected, formatter.format(Perfume.getInstance().originalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
-        double expected = 20.89;
-        double actual = Perfume.getInstance().getPRICE();
-        assertEquals(expected, actual);
+        String expected = "$20.89";
+        assertEquals(expected, formatter.format(Perfume.getInstance().getPRICE()));
     }
 
     @Test
     void getTax() {
-        double expected = 1.90;
-        double actual = Perfume.getInstance().getTAX();
-        assertEquals(expected, actual);
+        String expected = "$1.90";
+        assertEquals(expected, formatter.format(Perfume.getInstance().getTAX()));
     }
 
     @AfterEach

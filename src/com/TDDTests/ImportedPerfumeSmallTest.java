@@ -1,15 +1,19 @@
 package com.TDDTests;
 
 
+import com.MyTesting.ImportedChocolateSmall;
 import com.MyTesting.ImportedPerfumeSmall;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.text.NumberFormat;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class ImportedPerfumeSmallTest {
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     @BeforeEach
     void setUp() {
@@ -25,23 +29,20 @@ class ImportedPerfumeSmallTest {
 
     @Test
     void getOriginalPrice() {
-        double expected = 27.99;
-        double actual = ImportedPerfumeSmall.getInstance().originalPrice();
-        assertEquals(expected, actual);
+        String expected = "$27.99";
+        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().originalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
-        double expected = 32.19;
-        double actual = ImportedPerfumeSmall.getInstance().getPRICE();
-        assertEquals(expected, actual);
+        String expected = "$32.19";
+        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().getPRICE()));
     }
 
     @Test
     void getTax() {
-        double expected = 4.20;
-        double actual = ImportedPerfumeSmall.getInstance().getTAX();
-        assertEquals(expected, actual);
+        String expected = "$4.20";
+        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().getTAX()));
     }
 
     @AfterEach

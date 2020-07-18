@@ -4,9 +4,13 @@ import com.MyTesting.MusicCD;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.text.NumberFormat;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MusicCDTest {
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     @BeforeEach
     void setUp() {
@@ -22,23 +26,20 @@ public class MusicCDTest {
 
     @Test
     void getOriginalPrice() {
-        double actual = 14.99;
-        double expected = MusicCD.getInstance().originalPrice();
-        assertEquals(expected, actual);
+        String expected = "$14.99";
+        assertEquals(expected, formatter.format(MusicCD.getInstance().originalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
-        double expected = 16.49;
-        double actual = MusicCD.getInstance().getPRICE();
-        assertEquals(expected, actual);
+        String expected = "$16.49";
+        assertEquals(expected, formatter.format(MusicCD.getInstance().getPRICE()));
     }
 
     @Test
     void getTax() {
-        double expected = 1.50;
-        double actual = MusicCD.getInstance().getTAX();
-        assertEquals(expected, actual);
+        String expected = "$1.50";
+        assertEquals(expected, formatter.format(MusicCD.getInstance().getTAX()));
     }
 
     @AfterEach
