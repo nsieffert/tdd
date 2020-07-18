@@ -34,7 +34,7 @@
 * I attempted to refactor this even more to get rid of the array, but could not figure out how to calculate the price a different way.
 * I kept working at it and finally got it refactored to be a little more OOP oriented, though I am sure it's not perfect.
 * Was able to create a lot more tests.
-*
+* Two of the items gave me real trouble and I had to employ different techniques to get them to work.
 *
 *
 <h2>
@@ -42,8 +42,8 @@
 </h2>
 * I reflect that I still don't know enough to really do this the way it should be done. 
 * I am happy with the changes I was able to make, and I was happy I could get more tests created.
-* 
-*
+* I don't care for the one-off solutions I came up with for the two that were giving me trouble, but the solutions work.
+* With more time I could probably determine a better solution that could be applied across the board.
 *
 *
 *

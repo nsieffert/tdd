@@ -8,24 +8,30 @@ public class ImportedChocolatesLarge extends Merchandise {
     private final double TAX = .05;
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-    public static ImportedChocolatesLarge getInstance(){
+    public static ImportedChocolatesLarge getInstance() {
         return new ImportedChocolatesLarge();
     }
+
     public String getNAME() {
         return NAME;
     }
-    public double getOriginalPrice(){
+
+    public double getOriginalPrice() {
         formatter.format(PRICE);
         return PRICE;
     }
+
     public double getAfterTaxPrice() {
-        return (PRICE * TAX) + PRICE;
+        double afterTax = (PRICE * TAX) + PRICE;
+        double finalAfterTax = Math.ceil(afterTax * 20.0) / 20.0;
+        formatter.format(finalAfterTax);
+        return finalAfterTax;
     }
 
     public double getTAX() {
         double withTax = PRICE * TAX;
-        formatter.format(withTax);
-        return withTax;
-
+        double finalWithTax = Math.ceil(withTax * 20.0) / 20.0;
+        formatter.format(finalWithTax);
+        return finalWithTax;
     }
 }

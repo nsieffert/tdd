@@ -8,13 +8,14 @@ public class ImportedPerfumeSmall extends Merchandise {
     private final double TAX = .15;
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
-
     public static ImportedPerfumeSmall getInstance(){
         return new ImportedPerfumeSmall();
     }
+
     public String getNAME() {
         return NAME;
     }
+
     public double getOriginalPrice(){
         formatter.format(PRICE);
         return PRICE;

@@ -30,7 +30,7 @@ public class OutPutPricing {
     public String outputTwoTax() {
         double totalTax = ImportedChocolateSmall.getInstance().getTAX()
                 + ImportedPerfumeLarge.getInstance().getTAX();
-        return formatter.format(totalTax);
+                return formatter.format(totalTax);
     }
 
     public String outputThreePricing() {
