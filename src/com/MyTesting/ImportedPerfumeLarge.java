@@ -9,16 +9,19 @@ public class ImportedPerfumeLarge {
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
 
-    public static ImportedPerfumeLarge getInstance(){
+    public static ImportedPerfumeLarge getInstance() {
         return new ImportedPerfumeLarge();
     }
+
     public String getNAME() {
         return NAME;
     }
+
     public double originalPrice(){
         formatter.format(PRICE);
         return PRICE;
     }
+
     public double getPRICE() {
         return (PRICE * TAX) + PRICE;
     }
@@ -30,3 +33,4 @@ public class ImportedPerfumeLarge {
 
     }
 }
+

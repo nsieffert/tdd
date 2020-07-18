@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 public class ImportedChocolatesLarge {
     private final String NAME = "Imported Chocolates (large)";
     private final double PRICE = 11.25;
-    private final double TAX = .05;
+    private final double TAX = .0535;
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
 

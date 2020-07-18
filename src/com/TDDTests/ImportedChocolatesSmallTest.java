@@ -5,10 +5,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.text.NumberFormat;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class ImportedChocolatesSmallTest {
+    NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
     @BeforeEach
     void setUp() {
@@ -24,23 +27,20 @@ class ImportedChocolatesSmallTest {
 
     @Test
     void getOriginalPrice() {
-        double expected = 10.00;
-        double actual = ImportedChocolateSmall.getInstance().originalPrice();
-        assertEquals(expected, actual);
+        String expected = "$10.00";
+        assertEquals(expected, formatter.format(ImportedChocolateSmall.getInstance().originalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
-        double expected = 10.50;
-        double actual = ImportedChocolateSmall.getInstance().getPRICE();
-        assertEquals(expected, actual);
+        String expected = "$10.50";
+        assertEquals(expected, formatter.format(ImportedChocolateSmall.getInstance().getPRICE()));
     }
 
     @Test
     void getTax() {
-        double expected = .50;
-        double actual = ImportedChocolateSmall.getInstance().getTAX();
-        assertEquals(expected, actual);
+        String expected = "$0.50";
+        assertEquals(expected, formatter.format(ImportedChocolateSmall.getInstance().getTAX()));
     }
 
     @AfterEach
