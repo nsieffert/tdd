@@ -9,14 +9,12 @@ abstract class Merchandise {
     public String getNAME() {
         return name;
     }
-
-    public double originalPrice(){
+    public double getOriginalPrice(){
         return price;
     }
-   public double getPRICE() {
+    public double getAfterTaxPrice() {
       return (price * tax) + price;
     }
-
     public double getTAX() {
         return price * tax;
     }

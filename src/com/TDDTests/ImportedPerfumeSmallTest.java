@@ -1,7 +1,6 @@
 package com.TDDTests;
 
 
-import com.MyTesting.ImportedChocolateSmall;
 import com.MyTesting.ImportedPerfumeSmall;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,13 +29,13 @@ class ImportedPerfumeSmallTest {
     @Test
     void getOriginalPrice() {
         String expected = "$27.99";
-        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().originalPrice()));
+        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().getOriginalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
         String expected = "$32.19";
-        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().getPRICE()));
+        assertEquals(expected, formatter.format(ImportedPerfumeSmall.getInstance().getAfterTaxPrice()));
     }
 
     @Test

@@ -10,36 +10,39 @@ public class OutPutPricing {
 
     public String outputOnePricing() {
             double totalPrice;
-            totalPrice = ChocolateBar.getInstance().getPRICE() + Book.getInstance().getPRICE() + MusicCD.getInstance().getPRICE();
+            totalPrice = ChocolateBar.getInstance().getAfterTaxPrice() + Book.getInstance().getAfterTaxPrice()
+                    + MusicCD.getInstance().getAfterTaxPrice();
             return formatter.format(totalPrice);
         }
         public String outputOneTax() {
             double totalTax;
-            totalTax = ChocolateBar.getInstance().getTAX() + MusicCD.getInstance().getTAX() +
-                    Book.getInstance().getTAX();
+            totalTax = ChocolateBar.getInstance().getTAX() + MusicCD.getInstance().getTAX()
+                   + Book.getInstance().getTAX();
             return formatter.format(totalTax);
 
         }
 
     public String outputTwoPricing() {
-        double totalPrice = ImportedChocolateSmall.getInstance().getPRICE() + ImportedPerfumeLarge.getInstance().getPRICE();
+        double totalPrice = ImportedChocolateSmall.getInstance().getAfterTaxPrice()
+                + ImportedPerfumeLarge.getInstance().getAfterTaxPrice();
         return formatter.format(totalPrice);
     }
     public String outputTwoTax() {
-        double totalTax = ImportedChocolateSmall.getInstance().getTAX() + ImportedPerfumeLarge.getInstance().getTAX();
+        double totalTax = ImportedChocolateSmall.getInstance().getTAX()
+                + ImportedPerfumeLarge.getInstance().getTAX();
         return formatter.format(totalTax);
     }
 
     public String outputThreePricing() {
         double totalPrice;
-        totalPrice = ImportedPerfumeSmall.getInstance().getPRICE() + Perfume.getInstance().getPRICE() +
-                HeadachePills.getInstance().getPRICE() + ImportedChocolatesLarge.getInstance().getPRICE();
+        totalPrice = ImportedPerfumeSmall.getInstance().getAfterTaxPrice() + Perfume.getInstance().getAfterTaxPrice() +
+                HeadachePills.getInstance().getAfterTaxPrice() + ImportedChocolatesLarge.getInstance().getAfterTaxPrice();
         return formatter.format(totalPrice);
     }
     public String outputThreeTax() {
-        double totalTax = ImportedPerfumeSmall.getInstance().getTAX() + Perfume.getInstance().getTAX() +
-                HeadachePills.getInstance().getTAX() + ImportedChocolatesLarge.getInstance().getTAX();
-        return formatter.format(totalTax);
-    }
+            double totalTax = ImportedPerfumeSmall.getInstance().getTAX() + Perfume.getInstance().getTAX() +
+                    HeadachePills.getInstance().getTAX() + ImportedChocolatesLarge.getInstance().getTAX();
+            return formatter.format(totalTax);
+        }
 
     }

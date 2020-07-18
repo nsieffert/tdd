@@ -27,13 +27,13 @@ public class MusicCDTest {
     @Test
     void getOriginalPrice() {
         String expected = "$14.99";
-        assertEquals(expected, formatter.format(MusicCD.getInstance().originalPrice()));
+        assertEquals(expected, formatter.format(MusicCD.getInstance().getOriginalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
         String expected = "$16.49";
-        assertEquals(expected, formatter.format(MusicCD.getInstance().getPRICE()));
+        assertEquals(expected, formatter.format(MusicCD.getInstance().getAfterTaxPrice()));
     }
 
     @Test

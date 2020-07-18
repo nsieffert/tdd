@@ -23,14 +23,14 @@ public class ChocolateBarTest {
         @Test
         void getOriginalPrice() {
             double actual = .85;
-            double expected = ChocolateBar.getInstance().originalPrice();
+            double expected = ChocolateBar.getInstance().getOriginalPrice();
             assertEquals(expected, actual);
         }
 
         @Test
         void getAfterTaxPrice() {
             double actual = .85;
-            double expected = ChocolateBar.getInstance().getPRICE();
+            double expected = ChocolateBar.getInstance().getAfterTaxPrice();
             assertEquals(expected, actual);
         }
 

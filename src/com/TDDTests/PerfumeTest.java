@@ -28,13 +28,13 @@ class PerfumeTest {
     @Test
     void getOriginalPrice() {
         String expected = "$18.99";
-        assertEquals(expected, formatter.format(Perfume.getInstance().originalPrice()));
+        assertEquals(expected, formatter.format(Perfume.getInstance().getOriginalPrice()));
     }
 
     @Test
     void getAfterTaxPrice() {
         String expected = "$20.89";
-        assertEquals(expected, formatter.format(Perfume.getInstance().getPRICE()));
+        assertEquals(expected, formatter.format(Perfume.getInstance().getAfterTaxPrice()));
     }
 
     @Test

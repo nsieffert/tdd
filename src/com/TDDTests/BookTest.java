@@ -25,14 +25,14 @@ class BookTest {
     @Test
     void getOriginalPrice() {
         double expected = 12.49;
-        double actual = Book.getInstance().originalPrice();
+        double actual = Book.getInstance().getOriginalPrice();
         assertEquals(expected, actual);
     }
 
     @Test
     void getAfterTaxPrice() {
         double expected = 12.49;
-        double actual = Book.getInstance().getPRICE();
+        double actual = Book.getInstance().getAfterTaxPrice();
         assertEquals(expected, actual);
     }
 

@@ -2,7 +2,7 @@ package com.MyTesting;
 
 import java.text.NumberFormat;
 
-public class ImportedPerfumeLarge {
+public class ImportedPerfumeLarge extends Merchandise {
     private final String NAME = "Imported Perfume (large)";
     private final double PRICE = 47.50;
     private final double TAX = .15;
@@ -17,12 +17,12 @@ public class ImportedPerfumeLarge {
         return NAME;
     }
 
-    public double originalPrice(){
+    public double getOriginalPrice(){
         formatter.format(PRICE);
         return PRICE;
     }
 
-    public double getPRICE() {
+    public double getAfterTaxPrice() {
         return (PRICE * TAX) + PRICE;
     }
 

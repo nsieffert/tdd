@@ -7,7 +7,6 @@ public class Book extends Merchandise {
     private final double PRICE = 12.49;
     private final double TAX = 0;
     NumberFormat formatter = NumberFormat.getCurrencyInstance();
-
     public static Book getInstance(){
         return new Book();
     }
@@ -15,11 +14,12 @@ public class Book extends Merchandise {
     public String getNAME() {
         return NAME;
     }
-    public double originalPrice(){
+
+    public double getOriginalPrice(){
         formatter.format(PRICE);
         return PRICE;
     }
-    public double getPRICE() {
+    public double getAfterTaxPrice() {
         return (PRICE * TAX) + PRICE;
     }
 

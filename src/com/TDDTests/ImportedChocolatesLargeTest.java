@@ -28,14 +28,14 @@ class ImportedChocolatesLargeTest {
     @Test
     void getOriginalPrice() {
         double expected = 11.25;
-        double actual = ImportedChocolatesLarge.getInstance().originalPrice();
+        double actual = ImportedChocolatesLarge.getInstance().getOriginalPrice();
         assertEquals(expected, actual);
     }
 
     @Test
     void getAfterTaxPrice() {
         String expected = "$11.85";
-        assertEquals(expected, formatter.format(ImportedChocolatesLarge.getInstance().getPRICE()));
+        assertEquals(expected, formatter.format(ImportedChocolatesLarge.getInstance().getAfterTaxPrice()));
     }
 
     @Test

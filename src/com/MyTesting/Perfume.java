@@ -15,11 +15,11 @@ public class Perfume extends Merchandise {
     public String getNAME() {
         return NAME;
     }
-    public double originalPrice(){
+    public double getOriginalPrice(){
         formatter.format(PRICE);
         return PRICE;
     }
-    public double getPRICE() {
+    public double getAfterTaxPrice() {
         return (PRICE * TAX) + PRICE;
     }
 

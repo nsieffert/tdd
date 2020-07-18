@@ -1,6 +1,5 @@
 package com.TDDTests;
 
-import com.MyTesting.Book;
 import com.MyTesting.HeadachePills;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,14 +25,14 @@ class HeadachePillsTest {
     @Test
     void getOriginalPrice() {
         double expected = 9.75;
-        double actual = HeadachePills.getInstance().originalPrice();
+        double actual = HeadachePills.getInstance().getOriginalPrice();
         assertEquals(expected, actual);
     }
 
     @Test
     void getAfterTaxPrice() {
         double expected = 9.75;
-        double actual = HeadachePills.getInstance().getPRICE();
+        double actual = HeadachePills.getInstance().getAfterTaxPrice();
         assertEquals(expected, actual);
     }
 
